@@ -13,7 +13,7 @@ corr <- function(directory, threshold = 0) {
     
     tmp <- na.omit(read.csv(paste(directory,file, sep = "/")))
     if(nrow(tmp) > threshold) {
-      result <- round(cor(tmp[["sulfate"]],tmp[["nitrate"]]),5) # Rounding added to match provided output
+      result <- cor(tmp[["sulfate"]],tmp[["nitrate"]])
       results <- c(results, result)
     }
   }
