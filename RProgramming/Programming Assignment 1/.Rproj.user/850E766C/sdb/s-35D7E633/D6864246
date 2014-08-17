@@ -1,0 +1,16 @@
+{
+    "contents" : "complete <- function(directory, id = 1:332) {\n  ## 'directory' is a character vector of length 1 indicating\n  ## the location of the CSV files\n  \n  ## 'id' is an integer vector indicating the monitor ID numbers\n  ## to be used\n  \n  nobs <- numeric()\n  \n  for (monitor in id) {\n    file <- getMonitorFile(directory, monitor)\n    \n    nobs <- c(nobs,nrow(na.omit(file)))    \n  }\n  \n  ## Return a data frame of the form:\n  ## id nobs\n  ## 1  117\n  ## 2  1041\n  ## ...\n  ## where 'id' is the monitor ID number and 'nobs' is the\n  ## number of complete cases\n  cases <- data.frame(id,nobs)\n  cases\n}",
+    "created" : 1408297117132.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3158160484",
+    "id" : "D6864246",
+    "lastKnownWriteTime" : 1408299145,
+    "path" : "C:/Users/Jon/datasciencecoursera/RProgramming/Programming Assignment 1/complete.R",
+    "project_path" : "complete.R",
+    "properties" : {
+    },
+    "source_on_save" : true,
+    "type" : "r_source"
+}

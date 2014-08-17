@@ -1,0 +1,17 @@
+{
+    "contents" : "test.complete.examples <- function()\n{\n  checkEqualsNumeric(c(1,117), complete(\"specdata\", 1))\n  checkEqualsNumeric(matrix(c(2,4,8,10,12,1041,474,192,148,96),ncol=2,nrow=5), complete(\"specdata\", c(2, 4, 8, 10, 12)))\n  checkEqualsNumeric(matrix(c(30:25,932,711,475,338,586,463),ncol=2,nrow=6), complete(\"specdata\", 30:25))\n  checkEqualsNumeric(c(3,243), complete(\"specdata\", 3))\n}",
+    "created" : 1408299195647.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1022982419",
+    "id" : "8703CC28",
+    "lastKnownWriteTime" : 1408288701,
+    "path" : "C:/Users/Jon/datasciencecoursera/RProgramming/Programming Assignment 1/tests/complete.R",
+    "project_path" : "tests/complete.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

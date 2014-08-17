@@ -5,6 +5,14 @@ complete <- function(directory, id = 1:332) {
   ## 'id' is an integer vector indicating the monitor ID numbers
   ## to be used
   
+  nobs <- numeric()
+  
+  for (monitor in id) {
+    file <- getMonitorFile(directory, monitor)
+    
+    nobs <- c(nobs,nrow(na.omit(file)))    
+  }
+  
   ## Return a data frame of the form:
   ## id nobs
   ## 1  117
@@ -12,4 +20,6 @@ complete <- function(directory, id = 1:332) {
   ## ...
   ## where 'id' is the monitor ID number and 'nobs' is the
   ## number of complete cases
+  cases <- data.frame(id,nobs)
+  cases
 }
