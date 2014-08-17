@@ -8,7 +8,7 @@ pollutantmean <- function(directory, pollutant, id = 1:332) {
   
   ## 'id' is an integer vector indicating the monitor ID numbers
   ## to be used
-  
+  source("getMonitorFile.R")
   
   data <- numeric()
   
