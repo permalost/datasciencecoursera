@@ -8,4 +8,15 @@ corr <- function(directory, threshold = 0) {
   ## nitrate and sulfate; the default is 0
   
   ## Return a numeric vector of correlations
+  results <- numeric()
+  for (file in list.files(directory)) {
+    
+    tmp <- na.omit(read.csv(paste(directory,file, sep = "/")))
+    if(nrow(tmp) > threshold) {
+      result <- round(cor(tmp[["sulfate"]],tmp[["nitrate"]]),5) # Rounding added to match provided output
+      results <- c(results, result)
+    }
+  }
+  
+  results
 }
